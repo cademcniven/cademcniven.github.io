@@ -1,0 +1,114 @@
+body {
+  background-color: #565575;
+  font-family: 'Playfair Display', serif;
+}
+#container {
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 25% auto 25%;
+  height: 100vh;
+}
+#search {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  align-self: center;
+}
+#links {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  height: 2em;
+  width: 100%;
+}
+#link1 {
+  background-color: #62d196;
+  height: 100%;
+  width: 19%;
+  float: left;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#link2 {
+  background-color: #ff8080;
+  height: 100%;
+  width: 19%;
+  float: left;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#link3 {
+  background-color: #65b2ff;
+  height: 100%;
+  width: 19%;
+  float: left;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#link4 {
+  background-color: #ffe9aa;
+  height: 100%;
+  width: 19%;
+  float: left;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#link5 {
+  background-color: #9061ef;
+  height: 100%;
+  width: 19%;
+  float: left;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#weatherBox {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: red;
+  justify-self: right;
+  align-self: center;
+  height: 30%;
+  width: 10%;
+}
+input,
+textarea {
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #fbfcfc;
+}
+input {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+}
+.searchBar {
+  width: 16em;
+}
+table {
+  border-spacing: 2ch;
+}
+td {
+  border-colapse: separate;
+  width: 3ch;
+  height: 3ch;
+}
