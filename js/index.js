@@ -6,6 +6,7 @@ var arr;
 var blue = "#65b2ff";
 var yellow = "#ffe9aa";
 var white = "#fbfcfc";
+var black = "#100e23";
 
 fetch(url)
   .then((resp) => resp.json()) // Transform the data into json
@@ -39,6 +40,9 @@ fetch(url)
         }
         else if (arr[iCol].shortForecast.includes("Snow")){
           table.rows[iRow].cells[iCol].style.backgroundColor = white;      
+        }
+	      else if (arr[iCol].shortForecast.includes("Thunder")){
+          table.rows[iRow].cells[iCol].style.backgroundColor = black;      
         }
       }
     }
