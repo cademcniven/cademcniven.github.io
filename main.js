@@ -298,11 +298,8 @@ const wrapKanji = function (kanji) {
     k.meaning.join(', ') +
     '</span><span class="frequency">#' +
     k.freq +
-    '</span></div><div class="bottom"><div class="onyomi"><h5>On\'yomi</h5>' +
-    k.on +
-    '</div><div class="kunyomi"><h5>Kun\'yomi</h5>' +
-    k.kun +
-    '</div></div></div>'
+    '</div></div>'
+
   builtString += '</div></div>'
   builtString += '</div>'
 
