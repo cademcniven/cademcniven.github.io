@@ -350,12 +350,8 @@ const updateResultDisplay = function (resultDisplay, inputText) {
   const characterCount = inputText.length
   if (characterCount > screen.width / 42) {
     resultDisplay.setAttribute('style', 'font-size: 16pt;')
-  } else if (characterCount > screen.width / 60) {
-    resultDisplay.setAttribute('style', 'font-size: 24pt;')
-  } else if (characterCount > screen.width / 80) {
-    resultDisplay.setAttribute('style', 'font-size: 32pt;')
   } else {
-    resultDisplay.setAttribute('style', 'font-size: 48pt;')
+    resultDisplay.setAttribute('style', 'font-size: 24pt;')
   }
 
   var builtOutput = ''
