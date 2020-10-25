@@ -12,6 +12,20 @@ window.onload = function () {
         updateResultDisplay(resultDisplay, this.value)
       } else {
         resultDisplay.innerHTML = 'Ready!'
+
+        var GET = {}
+        var query = window.location.search.substring(1).split('&')
+        for (var i = 0, max = query.length; i < max; i++) {
+          if (query[i] === '')
+            // check for trailing & with no param
+            continue
+
+          var param = query[i].split('=')
+          GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || '')
+        }
+
+        if (GET.query) textInputBox.value = GET.query
+        updateResultDisplay(resultDisplay, GET.query)
       }
 
       textInputBox.focus()
@@ -22,19 +36,6 @@ window.onload = function () {
       updateResultDisplay(resultDisplay, this.value)
     }
   })
-
-  var GET = {}
-  var query = window.location.search.substring(1).split('&')
-  for (var i = 0, max = query.length; i < max; i++) {
-    if (query[i] === '')
-      // check for trailing & with no param
-      continue
-
-    var param = query[i].split('=')
-    GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || '')
-  }
-
-  textInputBox.value = GET.query
 }
 
 const verb_searchback = 6
