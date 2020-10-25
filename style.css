@@ -240,20 +240,8 @@ footer a {
   padding: 0px 10px;
 }
 
-.kanji .secondary {
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr;
-  text-align: center;
-  font-family: sans-serif;
-}
-
 .bottom h5 {
   margin: 8px 4px;
-}
-
-.secondary h5 {
-  margin-top: 12px;
-  margin-bottom: 8px;
 }
 
 h5 {
@@ -264,17 +252,9 @@ h5 {
   text-align: center;
 }
 
-.secondary div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-bottom: 5px;
-}
-
 .kanji .popup2 {
     visibility: hidden;
-    width: 316px;
+    width: 216px;
  
     position: absolute;
     z-index: 1;

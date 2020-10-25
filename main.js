@@ -302,25 +302,7 @@ const wrapKanji = function (kanji) {
     k.on +
     '</div><div class="kunyomi"><h5>Kun\'yomi</h5>' +
     k.kun +
-    '</div></div></div><div class="secondary">'
-  builtString +=
-    '<div class="back-lv' +
-    (k.grade > 7 ? 7 : k.grade) +
-    '"><h5>Grade</h5>' +
-    k.grade +
-    '</div>'
-  builtString +=
-    '<div class="back-lv' +
-    (9 - 2 * k.jlpt) +
-    '"><h5>JLPT</h5>' +
-    k.jlpt +
-    '</div>'
-  builtString +=
-    '<div class="back-lv' +
-    Math.ceil(k.wk / 10) +
-    '"><h5>WaniKani</h5>' +
-    k.wk +
-    '</div>'
+    '</div></div></div>'
   builtString += '</div></div>'
   builtString += '</div>'
 
