@@ -294,7 +294,7 @@ h5 {
 }
 
 .kanji:hover .popup2 {
-
+	visibility: visible;
 }
 
 .kanji {
