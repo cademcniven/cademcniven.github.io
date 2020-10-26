@@ -4,6 +4,19 @@ window.onload = function () {
   const textInputBox = document.getElementById('input')
   const resultDisplay = document.getElementById('result-span')
 
+  var GET = {}
+  var query = window.location.search.substring(1).split('&')
+  for (var i = 0, max = query.length; i < max; i++) {
+    if (query[i] === '')
+      // check for trailing & with no param
+      continue
+
+    var param = query[i].split('=')
+    GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || '')
+  }
+  if (GET.color)
+    document.getElementById('result').style.backgroundColor = GET.color
+
   kuromoji
     .builder({ dicPath: 'kuromoji/dict/' })
     .build(function (err, tokenizer) {
@@ -13,18 +26,8 @@ window.onload = function () {
       } else {
         resultDisplay.innerHTML = 'Ready!'
 
-        var GET = {}
-        var query = window.location.search.substring(1).split('&')
-        for (var i = 0, max = query.length; i < max; i++) {
-          if (query[i] === '')
-            // check for trailing & with no param
-            continue
-
-          var param = query[i].split('=')
-          GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || '')
-        }
-
         if (GET.query) textInputBox.value = GET.query
+
         updateResultDisplay(resultDisplay, GET.query)
       }
 
