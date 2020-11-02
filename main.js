@@ -1,5 +1,16 @@
 var km_tokenizer = null
 
+function stripASCII (str) {
+  if (typeof str !== 'string') {
+    return false
+  }
+
+  return str
+    .split('')
+    .filter(x => x.charCodeAt(0) > 127)
+    .join('')
+}
+
 window.onload = function () {
   const textInputBox = document.getElementById('input')
   const resultDisplay = document.getElementById('result-span')
@@ -26,9 +37,10 @@ window.onload = function () {
       } else {
         resultDisplay.innerHTML = 'Ready!'
 
-        if (GET.query) textInputBox.value = GET.query
+        var query = stripASCII(GET.query)
+        textInputBox.value = query
 
-        updateResultDisplay(resultDisplay, GET.query)
+        updateResultDisplay(resultDisplay, query)
       }
 
       textInputBox.focus()
