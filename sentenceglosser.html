@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Cade McNiven's Site</title>
+    </head>
+    <body>
+        <aside>
+            <span class="sidebarContent">
+                <img src="images/face.jpg">
+                <div class="sidebarTitle">Cade's Site & Blog</div>
+                <div class="sidebarSubTitle">Developer & Language Learner</div>
+                <nav>
+                    <a href="index.html">Posts</a> /
+                    <a href="projects.html">Projects</a> /
+                    <a href="japaneseresources.html">Japanese Resources</a>
+                </nav>
+            </span>
+        </aside>
+        <main>
+            <div class="mainContent">
+                <h1>Japanese Sentencer Gloss Utility For Anki</h1>
+                <hr>
+                <p>A website that provides a gloss of a japense sentence,
+                    designed to be embedded into Anki cards.</p>
+                <p><img src="images/sentenceglosser/demo.gif"
+                        referrerpolicy="no-referrer"></p>
+                <h3>How To Use</h3>
+                <p>Add the following line to your note:</p>
+                <p><code>&lt;embed
+                        src=https://cademcniven.github.io/gloss.html?query={{sentence}}
+                        style=&quot;width: 100%; height:100%; min-height: 350px;
+                        &quot;&gt;</code></p>
+                <p>replace <code>{{sentence}}</code> with whatever your field is
+                    called.
+                    Also feel free to adjust the height and width if you
+                    experience any
+                    issues with that.</p>
+                <h3>Changing Background Color</h3>
+                <p>You can also change the background color to match the style
+                    of your
+                    card. To do this, you&#39;ll need to add <code>&amp;color=</code>
+                    to
+                    your embed src like so:</p>
+                <p><code>&lt;embed
+                        src=https://cademcniven.github.io/gloss.html?query={{sentence}}&amp;color=white
+                        style=&quot;width: 100%; height:100%; min-height: 350px;
+                        &quot;&gt;</code></p>
+                <p><strong>Note:</strong> hex color values are <strong>not</strong>
+                    supported. You either need to specify an web-compliant color
+                    name,
+                    or convert your hex to rgb like this:</p>
+                <p><code>&lt;embed
+                        src=https://cademcniven.github.io/gloss.html?query={{sentence}}&amp;color=rgb(12,34,56)
+                        style=&quot;width: 100%; height:100%; min-height: 350px;
+                        &quot;&gt;</code></p>
+                <h3>Issues</h3>
+                <p>This is very much a WIP so don&#39;t expect it to be perfect,
+                    but I
+                    think even as it currently is it&#39;s very usable. I&#39;ll
+                    continue working on it in the future which might fix things,
+                    or
+                    might make them worse, idk.</p>
+                <p>As with any other auto-generated info, don&#39;t blindly
+                    trust the
+                    furigana -- it&#39;s often correct, but not perfect. Also,
+                    the
+                    tokenization (that is, how it chooses to break up words) is
+                    decent
+                    but also not perfect, and there&#39;s not much I can do
+                    about that.</p>
+                <p>Feel free to let me know if you notice any serious issues and
+                    I&#39;ll try to fix it.</p>
+                <h3>Sources</h3>
+                <p>This project is a fork of <a
+                        href='https://github.com/DeadlyFugu/Rikaibun'>Rikaibun</a>
+                    that&#39;s been modded to embed nicely into anki.</p>
+                <h3>License</h3>
+                <p>All code written by me in this project is under the zlib
+                    license.
+                    kuromoji.js is provided under it&#39;s own license.
+                    The files jmdict_dump.js and jmdict_meanings.js are derived
+                    from the
+                    JMdict dictionary file in accordance with the Electronic
+                    Dictionary
+                    Research and Development Group&#39;s license.
+                    The file kanjidic2.js is similarly derived from the
+                    kanjidic2
+                    dictionary file in accordance with the Electronic Dictionary
+                    Research and Development Group&#39;s license.</p>
+            </div>
+        </main>
+    </body>
+</html>

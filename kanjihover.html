@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Cade McNiven's Site</title>
+    </head>
+    <body>
+        <aside>
+            <span class="sidebarContent">
+                <img src="images/face.jpg">
+                <div class="sidebarTitle">Cade's Site & Blog</div>
+                <div class="sidebarSubTitle">Developer & Language Learner</div>
+                <nav>
+                    <a href="index.html">Posts</a> /
+                    <a href="projects.html">Projects</a> /
+                    <a href="japaneseresources.html">Japanese Resources</a>
+                </nav>
+            </span>
+        </aside>
+        <main>
+            <div class="mainContent">
+                <h1>Kanji Hover</h1>
+                <hr>
+                <p>A kanji script for Anki</p>
+                <p><a
+                        href='https://github.com/cademcniven/Kanji-Hover/releases/'>Download</a></p>
+                <p><img src="images\kanjihover\demo.gif"
+                        referrerpolicy="no-referrer"></p>
+                <h3>How To Use</h3>
+                <p><a
+                        href='https://github.com/cademcniven/Kanji-Hover/releases/'>Download
+                        _kanjiHover.js</a> and add it to your collection.media
+                    folder.
+                    Add the following line to your note:</p>
+                <p><code>&lt;script src
+                        =&quot;_kanjiHover.js&quot;&gt;&lt;/script&gt;</code></p>
+                <p><strong>Note:</strong> By default, Kanji Hover will not
+                    automatically scan your entire card. Instead, it is only
+                    active inside <code>&lt;div id=&quot;kanjiHover&quot;&gt;</code>.
+                    If you would like it to encompass the entire card, wrap the
+                    entire card in that div like so:</p>
+                <p><img src="images\kanjihover\template.png"
+                        referrerpolicy="no-referrer"></p>
+                <h3>Changing The Appearance</h3>
+                <p>The css for the popup can be changed in two ways:</p>
+                <ol start=''>
+                    <li>Edit the script itself, at the bottom there is a big
+                        block of css that you can edit.</li>
+                    <li>Using Anki&#39;s Styling area. The area you point at is
+                        <code>.kanjiTooltip</code>, the popup is <code>.kanjiTooltipText</code>,
+                        and the red text is <code>.hoverText</code>.</li>
+
+                </ol>
+                <h3>Compatibility &amp; Issues</h3>
+                <p><strong>This script is not compatible with the &quot;kanjax
+                        with koohii&quot; script.</strong> If you try to use
+                    both, very bad things will happen. I&#39;m still
+                    investigating the reason for the incompatibility, and
+                    I&#39;ll update the script if I figure it out.</p>
+                <p><strong>This script can cause issues with ichi.moe, or other
+                        embedded sites.</strong> If you use an embed like that,
+                    make sure that it is not contained within <code>&lt;div
+                        id=&quot;kanjiHover&quot;&gt;</code>.</p>
+                <p>Other than that, there very well may be more errors that come
+                    up. If you find anything, either make an issue or message me
+                    on Discord.</p>
+                <h3>Sources</h3>
+                <p>This project uses the API provided by <a
+                        href='https://kanjiapi.dev' target='_blank' class='url'>https://kanjiapi.dev</a>.</p>
+            </div>
+        </main>
+    </body>
+</html>
