@@ -1,6 +1,7 @@
 ### Recommended Viewing/Reading
 
 * [Stephen Krashen on Language Acquisition](https://www.youtube.com/watch?v=NiTsduRreug)
+* [Reading When You DON'T Understand Can Actually Help You Learn?!](https://www.youtube.com/watch?v=PJxDWiEqq9c)
 * [Reading 100 Japanese kids books in 8 months](https://www.youtube.com/watch?v=4uzL6Izu4JA)
 
 ### Recommended Resources
