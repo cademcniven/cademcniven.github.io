@@ -3,6 +3,8 @@ A kanji script for Anki
 
 [Download](https://github.com/cademcniven/Kanji-Hover/releases/tag/kanjiHoverV1)
 
+[Changelog](https://github.com/cademcniven/Kanji-Hover/blob/main/Changelog.md)
+
 ![](images\kanjihover\demo.gif)
 
 ### How To Use
@@ -26,6 +28,10 @@ The css for the popup can be changed in two ways:
 ### Compatibility & Issues
 
 **This script is not compatible with the "kanjax with koohii" script.** If you try to use both, very bad things will happen. I'm still investigating the reason for the incompatibility, and I'll update the script if I figure it out.
+
+**This script is not compatible with the Migaku Japanese addon.** Both this script and Migaku Japanese work by injecting html into the card, but they end up breaking each other in the process. I *might* try to fix this someday.
+
+**You may experience undesired appearance if your card css styles the "a" tag.** Because this script wraps all kanji in links, any styling that you give to links in your card will be automatically applied to all kanji as well. If you *don't* have links styled, the kanji should, by default, look like the rest of your text.
 
 **This script can cause issues with ichi.moe, or other embedded sites.** If you use an embed like that, make sure that it is not contained within `<div id="kanjiHover">`.
 
