@@ -22,12 +22,13 @@ aside {
     left: 0;
     overflow-x: hidden;
     text-align: center;
-    background-color: hsl(250, 38%, 94%);
+    background-color: #f1b24a;
     display: flex;
     justify-content: center;
 }
 
 .sidebarContent {
+    color: white;
     margin-top: auto;
     text-align: center;
 }
@@ -50,13 +51,6 @@ aside {
 nav>a,
 nav>a:visited {
     text-decoration: none;
-    color: #EE7674;
-}
-
-nav>a:hover,
-nav>a:focus,
-nav>a:active main {
-    background-color: #af5755;
 }
 
 main {
@@ -247,13 +241,13 @@ textarea {
 
 a,
 a:visited {
-    color: #987284;
+    color: #3c403d;
 }
 
 a:hover,
 a:focus,
 a:active {
-    background-color: #5a3848;
+    background-color: #f1b24a;
 }
 
 pre {
