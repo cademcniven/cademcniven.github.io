@@ -8,6 +8,7 @@
 
 * [Jo-Mako's Japanese Spreadsheet](https://docs.google.com/spreadsheets/d/1ukDIWSkh_xvpppPbgs1nUR2kaEwFaWlsJgZUlb9LuTs/edit#gid=1357228088)
 * [timebox](https://tchin25.github.io/timebox/)
+* [Yomichan](https://foosoft.net/projects/yomichan/)
 
 ### Anki Decks
 
@@ -26,6 +27,7 @@
 * [Audio Condenser](https://ercanserteli.com/condenser/)
 * [Different Audio Condenser](https://github.com/dxing97/subs2cia)
 * [Dialogue Extracter](https://github.com/brennier/extract-dialogue)
+* [Yomichan](https://foosoft.net/projects/yomichan/)
 
 ### Listening Practice
 * [NHK Math](https://www.nhk.or.jp/kokokoza/library/tv/basicmath/)

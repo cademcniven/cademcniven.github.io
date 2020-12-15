@@ -9,7 +9,7 @@ A kanji script for Anki
 
 ### How To Use
 
-[Download \_kanjiHover.js](https://github.com/cademcniven/Kanji-Hover/releases/tag/kanjiHoverV1) and add it to your collection.media folder.
+[Download \_kanjiHover.js](https://github.com/cademcniven/Kanji-Hover/releases/) and add it to your collection.media folder.
 Add the following line to your note:
 
 `<script src ="_kanjiHover.js"></script>`
