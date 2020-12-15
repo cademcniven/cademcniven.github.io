@@ -7,6 +7,12 @@ A kanji script for Anki
 
 ![](images\kanjihover\demo.gif)
 
+### Features
+
+* Hover any kanji for information about its grade level, meanings, and readings.
+* Customize which portion of the card to apply the script to.
+* Middle-mouse-click to open the Wikitionary page for that kanji.
+
 ### How To Use
 
 [Download \_kanjiHover.js](https://github.com/cademcniven/Kanji-Hover/releases/) and add it to your collection.media folder.
