@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Cade McNiven's Site</title>
+    </head>
+    <body>
+        <aside>
+            <span class="sidebarContent">
+                <img src="images/face.jpg">
+                <div class="sidebarTitle">Cade's Site & Blog</div>
+                <div class="sidebarSubTitle">Developer & Language Learner</div>
+                <nav>
+                    <a href="index.html">Posts</a> /
+                    <a href="projects.html">Projects</a> /
+                    <a href="japaneseresources.html">Japanese Resources</a>
+                </nav>
+            </span>
+        </aside>
+        <main>
+            <div class="mainContent">
+                <h1>Eminent Note Type</h1>
+                <p>A note type for learning Japanese with Anki</p>
+                <p><a
+                        href='https://mega.nz/folder/3ENBFSwJ#OxUmvGmoY6J46Dn_YFhIMQ'>Download</a></p>
+                <p><img src="images\notetype\demo.gif"
+                        referrerpolicy="no-referrer"></p>
+                <p><img src="images\notetype\demo2.gif"
+                        referrerpolicy="no-referrer"></p>
+                <p>&nbsp;</p>
+                <h2>Features</h2>
+                <ul>
+                    <li><p><a href='/kanjihover.html'>Kanji Hover</a> on the
+                            front
+                            and back</p>
+                    </li>
+                    <li><p><a href='jagloss.html'>JAGloss</a> on the back</p>
+                    </li>
+                    <li><p>Highlighted target word on front, with the rest of
+                            the sentence dimmed to be less distracting</p>
+                        <ul>
+                            <li>If no word is present in the field, the sentence
+                                won&#39;t be dimmed</li>
+
+                        </ul>
+                    </li>
+                    <li><p>Audio on back with audio icons hidden</p>
+                    </li>
+                    <li><p><a href='https://ichi.moe/'>ichi.moe</a> embed to
+                            provide extra info if needed</p>
+                        <ul>
+                            <li>By default the embed isn&#39;t shown in order to
+                                keep the card clean and simple</li>
+                            <li>Visibility of the embed can be toggled by either
+                                clicking on it or by pressing <code>tab</code>
+                                on your keyboard.</li>
+
+                        </ul>
+                    </li>
+                    <li><p>Multiple color schemes depending on whether Anki is
+                            in night theme or not</p>
+                    </li>
+                    <li><p>Tested on both desktop and mobile</p>
+                    </li>
+
+                </ul>
+                <p>&nbsp;</p>
+                <h2>How To Use</h2>
+                <p>Once you&#39;ve used the download link at the top of this
+                    page, it should have imported a deck (with 1 card) into
+                    Anki. You can immediately delete this deck if you want, but
+                    sharing decks is currently the only way to share note types.
+                    Now you should have a note type called EminentV1 (or V2, 3,
+                    etc., I can&#39;t see the future). </p>
+                <p>Now all you have to do is add new cards, or convert existing
+                    cards to this note type.</p>
+                <p>&nbsp;</p>
+                <h2>Explanation of Fields</h2>
+                <pre><code>word
+</code></pre>
+                <p>This is the target word you&#39;re trying to learn. Assuming
+                    you&#39;re learning an i+1 sentence, there should be exactly
+                    1 unknown word, and that word should go in this field. The
+                    word in this field will be highlighted within the sentence.
+                </p>
+                <p>It&#39;s totally fine to leave this field blank, but the
+                    highlighting functionality won&#39;t work if you do.</p>
+                <p><strong>Note:</strong> if you want the highlighting
+                    functionality to work properly, the word in this field must
+                    <strong>exactly</strong> match the form the word is in in
+                    the sentence. </p>
+                <p>For example, if the <code>word</code> field contains the
+                    dictionary form of the word, but the sentence contains the
+                    te-form of the word, it won&#39;t highlight.</p>
+                <pre><code>reading
+</code></pre>
+                <p>This is for any pitch accent info you might use on your
+                    cards. If you&#39;re curious, I use <a
+                        href='https://ankiweb.net/shared/info/932119536'
+                        target='_blank' class='url'>https://ankiweb.net/shared/info/932119536</a>.
+                    This field is added to the very bottom of the card.</p>
+                <pre><code>definition
+</code></pre>
+                <p>The definition of <code>word</code></p>
+                <pre><code>sentence
+</code></pre>
+                <p>The Japanese sentence</p>
+                <pre><code>sentenceMeaning
+</code></pre>
+                <p>The native-language meaning of <code>sentence</code>. This
+                    field is optional.</p>
+                <pre><code>wordAudio
+</code></pre>
+                <p>Audio that corresponds to <code>word</code></p>
+                <pre><code>sentenceAudio
+</code></pre>
+                <p>Audio that corresponds to <code>sentence</code></p>
+                <pre><code>picture
+</code></pre>
+                <p>A picture</p>
+                <pre><code>sort
+</code></pre>
+                <p>Optional field to sort by in the browser.</p>
+                <pre><code>Focus_Morph
+</code></pre>
+                <p>Optional field for use with Morphman</p>
+                <pre><code>MorphMan_Unknowns
+</code></pre>
+                <p>Optional field for use with Morphman</p>
+                <p>&nbsp;</p>
+            </div>
+        </main>
+    </body>
+</html>
