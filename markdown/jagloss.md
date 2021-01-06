@@ -193,6 +193,10 @@ The dictionary is a json file where the headword is the Japanese word itself. It
 
 ## Compatibility & Issues
 
+**This script will not recognize a lot of words**
+
+Finding all of the words in a Japanese sentence is surprisingly difficult for a machine to do, and it's even more difficult to do in 100 lines of javascript. This script uses [TinySegmenter](http://chasen.org/~taku/software/TinySegmenter/) to find words. It is nowhere close to perfect, but it's good enough to be useful.
+
 **This script will likely break if you use it with scripts/addons that mess with the html of your card**
 
 This *may* include things like `kanjax with koohii`, `Migaku Japanese`, `Migaku Editor`, and `kanjiHover` (yes I understand the irony).
