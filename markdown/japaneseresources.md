@@ -8,6 +8,8 @@
 * [Anki Setup](https://animecards.site/ankisetup/)
 * [A Year to Learn Japanese](https://docs.google.com/document/d/10bRzVblKVOsQJjTc2PIi1Gbj_LrsJCkMkh0SutXCZdI/edit#)
 * [Refold](https://refold.la/)
+* [The Moe Way](https://learnjapanese.moe/)
+* [Animecards Site](https://animecards.site/)
 
 ### Recommended Resources
 
@@ -25,6 +27,8 @@
 * [Eminent Grammar](https://ankiweb.net/shared/info/567651789)
 * [Jo-Mako's Anki Decks](https://ankiweb.net/shared/byauthor/1988124792)
 * [Perditio's Anki Decks](https://ankiweb.net/shared/byauthor/960431736)
+* [JP1K](https://tatsumoto-ren.github.io/blog/jp1k-anki-deck.html)
+* [Complete Jouyou Kanji Writing Deck](https://ankiweb.net/shared/info/759825185)
 
 ### Listening Practice
 
