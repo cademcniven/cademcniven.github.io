@@ -54,6 +54,7 @@
 * [Tips for Japanese Pitch Accent](https://gist.github.com/k3zi/3f38070efffa38db83cd5745d83b1235)
 * [Pitch Accent (Minimal Pairs)](https://kotu.io/tests/pitchAccent/minimalPairs)
 * [NHK Ojad Pitch Accent Deck](https://ankiweb.net/shared/info/1442436955)
+* [imabi Pitch](https://www.imabi.net/pitch.htm)
 
 ### Reading Practice
 
@@ -67,6 +68,7 @@
 * [Satori Reader](https://www.satorireader.com/)
 * [japanese.io](https://www.japanese.io/)
 * [drdru](https://drdru.github.io/)
+* [Read Your Level](http://readyourlevel.jamesknelson.com/browse)
 
 ### Tools
 * [timebox](https://tchin25.github.io/timebox/)
@@ -78,3 +80,15 @@
 * [NLP Japanese Dictionary](https://nlpjapanesedictionary.wordpress.com/)
 * [tachiyomiOCR](https://github.com/Rattlehead15/tachiyomiOCR)
 * [jidoujisho](https://github.com/lrorpilla/jidoujisho)
+
+### Visual Novels
+
+* [Visual Novel Guide](https://learnjapanese.moe/vn/)
+* [List of Starter Visual Novels](https://docs.google.com/document/d/1KnyyDt7jimEz-dgeMSKymRaT2r3QKBPm9AzqZ6oUWAs/pub)
+* [Visual Novel Difficulty List](https://jpdb.io/visual-novel-difficulty-list)
+* [LLJ Visual Novel Difficulty List](https://docs.google.com/spreadsheets/d/1SAG9PEkocXatyk5zyRMnqa61WnPV2_ixnDISjtjQBSU/edit#gid=0)
+* [Jo-Mako's Readability List](https://docs.google.com/spreadsheets/d/1ukDIWSkh_xvpppPbgs1nUR2kaEwFaWlsJgZUlb9LuTs/edit#gid=822742203) 
+* [DJT Reading List](https://docs.google.com/spreadsheets/d/1be-gX3ozkYBVbGVLAJHc8P6-gKCfZkVPRA_V6VaSQ00/pubhtml#)
+* [Untranslated Visual Novels for Beginners](https://i.imgur.com/dzXCyQY.png)
+* [Visual novels by reading difficulty](https://docs.google.com/spreadsheets/d/1bYavI7WJzNxEV2D6tT2Cj91R-RLCfS_9FaAzKLKxIog/edit#gid=668846208)
+* [Anacreon DJT Visual Novels By Difficulty](https://anacreondjt.gitlab.io/vn-chart/)
