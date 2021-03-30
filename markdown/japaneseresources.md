@@ -14,7 +14,6 @@
 ### Recommended Resources
 
 * [Jo-Mako's Japanese Spreadsheet](https://docs.google.com/spreadsheets/d/1ukDIWSkh_xvpppPbgs1nUR2kaEwFaWlsJgZUlb9LuTs/edit#gid=1357228088)
-* [Awesome Japanese](https://github.com/EngJpDiscordExchange/Awesome-Japanese/blob/master/readme.md)
 * [timebox](https://tchin25.github.io/timebox/)
 * [Yomichan](https://foosoft.net/projects/yomichan/)
 * [Jisho](https://jisho.org/)
@@ -29,16 +28,49 @@
 * [Perditio's Anki Decks](https://ankiweb.net/shared/byauthor/960431736)
 * [JP1K](https://tatsumoto-ren.github.io/blog/jp1k-anki-deck.html)
 * [Complete Jouyou Kanji Writing Deck](https://ankiweb.net/shared/info/759825185)
+* [Bushu Anki Deck (Forget the Kanji)](https://github.com/chriskempson/bushu-anki-deck)
+* [Core Anime Deck](https://ankiweb.net/shared/info/493795566)
 
-### Listening Practice
+### Listening
 
-* [NHK Math](https://www.nhk.or.jp/kokokoza/library/tv/basicmath/)
-* [NHK Japanese](https://www.nhk.or.jp/kokokoza/tv/basickokugo/)
 * [Nihongo Switch Podcast](https://nihongoswitch.com/)
 * [Nihongo con Teppei Beginner Podcast](http://nihongoconteppei.com/)
 * [Nihongo con Teppei Regular Podcast](http://teppeisensei.com/)
-* [Hololive](https://en.hololive.tv/member)
 * [Learn Japanese with Noriko](https://www.youtube.com/channel/UCKa6jaRaKR9-n-cuWSBKqsA)
+* [家入レオ in the House Podcast](https://www.youtube.com/playlist?list=PLhKqNHE5QJLipLhZNvC12YFLszZyCFexI)
+
+### Watching
+
+* [Hololive](https://en.hololive.tv/member)
+* [Vtuber Clip Channels](https://docs.google.com/spreadsheets/d/1MiTqb5zJeGNjv2bzWPdwlfmsprN6E7LSM1flVogzhDw/edit#gid=0)
+* [NHK High School Classes](https://www.nhk.or.jp/kokokoza/library/)
+* [asbplayer](https://killergerbah.github.io/asbplayer/)
+* [animebook](https://animebook.github.io/)
+  * More info [here](https://github.com/animebook/animebook.github.io)
+* [mpvacious](https://github.com/Ajatt-Tools/mpvacious)
+* [jimaku player](https://github.com/sheodox/jimaku-player)
+  * Allows you to use your own subtitles on VRV or Crunchyroll
+* [Language Learning with Netflix](https://languagelearningwithnetflix.com/)
+* [Language Learning with Youtube](https://chrome.google.com/webstore/detail/language-learning-with-yo/jkhhdcaafjabenpmpcpgdjiffdpmmcjb?hl=en)
+
+### Reading
+
+* [NHK Easy](https://www3.nhk.or.jp/news/easy/)
+* [NHK Easier](https://nhkeasier.com/)
+* [Tachiyomi](https://tachiyomi.org/)
+  * or [tachiyomiOCR](https://github.com/Rattlehead15/tachiyomiOCR)
+* [syosetu](http://yomou.syosetu.com/rank/genretop/)
+  * Most popular webnovel platform
+  * [Collection of top 100 completed novels](https://mega.nz/file/2Y9yRCzI#WEykIKMfxk3W38gP2u6fPzBNqw8YP-Bd1iP1kqMvCGo), useful for [MorphMan](https://ankiweb.net/shared/info/900801631)'s readability analyzer. There's also this [yomichan format frequency list](https://mega.nz/file/fQ9VHAIA#P8M1dyLiM-JDb_Q0ZyeEw0cGIcNER6K2Iuh3HzNRPcI) based on those 100 novels.
+* [Tadoku](https://tadoku.org/japanese/book-search/?level=&series=&kind%5B%5D=040&kw=&order=register_desc)
+* [Reajer](https://reajer.weebly.com/)
+* [Hukumusume](http://www.hukumusume.com/douwa/0_6/index.html)
+* [Satori Reader](https://www.satorireader.com/)
+* [japanese.io](https://www.japanese.io/)
+* [drdru](https://drdru.github.io/)
+* [Read Your Level](http://readyourlevel.jamesknelson.com/browse)
+* [Kiwi Browser](https://kiwibrowser.com/)
+  * Mobile app that works with chrome addons. Allows you to read with yomichan on mobile.
 
 ### Grammar
 
@@ -56,20 +88,6 @@
 * [NHK Ojad Pitch Accent Deck](https://ankiweb.net/shared/info/1442436955)
 * [imabi Pitch](https://www.imabi.net/pitch.htm)
 
-### Reading Practice
-
-* [NHK Easy](https://www3.nhk.or.jp/news/easy/)
-* [NHK Easier](https://nhkeasier.com/)
-* [Tachiyomi](https://tachiyomi.org/)
-* [Tsubasabunko](https://tsubasabunko.jp/)
-* [Tadoku](https://tadoku.org/japanese/book-search/?level=&series=&kind%5B%5D=040&kw=&order=register_desc)
-* [Reajer](https://reajer.weebly.com/)
-* [Hukumusume](http://www.hukumusume.com/douwa/0_6/index.html)
-* [Satori Reader](https://www.satorireader.com/)
-* [japanese.io](https://www.japanese.io/)
-* [drdru](https://drdru.github.io/)
-* [Read Your Level](http://readyourlevel.jamesknelson.com/browse)
-
 ### Tools
 * [timebox](https://tchin25.github.io/timebox/)
 * [Sentence Splitter](http://morphadorner.northwestern.edu/morphadorner/sentencesplitter/example/)
@@ -80,6 +98,8 @@
 * [NLP Japanese Dictionary](https://nlpjapanesedictionary.wordpress.com/)
 * [tachiyomiOCR](https://github.com/Rattlehead15/tachiyomiOCR)
 * [jidoujisho](https://github.com/lrorpilla/jidoujisho)
+* [Taiga](https://taiga.moe/)
+  * [AJATT tip: Efficiently logging anime using Taiga](https://www.youtube.com/watch?v=KFC0JYwlVcs)
 
 ### Visual Novels
 
@@ -92,3 +112,13 @@
 * [Untranslated Visual Novels for Beginners](https://i.imgur.com/dzXCyQY.png)
 * [Visual novels by reading difficulty](https://docs.google.com/spreadsheets/d/1bYavI7WJzNxEV2D6tT2Cj91R-RLCfS_9FaAzKLKxIog/edit#gid=668846208)
 * [Anacreon DJT Visual Novels By Difficulty](https://anacreondjt.gitlab.io/vn-chart/)
+* [Visual Novel Stats](http://wiki.wareya.moe/Stats)
+* [vndb](https://vndb.org/)
+
+### Articles
+
+* [Strategis to avoid memory interference in flashcard collections](https://coffeejapanesestuff.neocities.org/interference.html)
+* [An easy way to learn hiragana](https://coffeejapanesestuff.neocities.org/hiragana.html)
+* [Writing Japanese](https://tatsumoto-ren.github.io/blog/writing-japanese.html)
+* [Scientific Studies About Language Learning](https://web.archive.org/web/20190207213227/http://rtkwiki.koohii.com/wiki/Scientific_Studies_about_Learning)
+
