@@ -83,6 +83,7 @@
 
 ### Pitch Accent
 
+* [Dogen Phonetics](https://www.youtube.com/playlist?list=PLeK-ilb1gk6md2oCbjPh4Rl0lnXXOV22P)
 * [Tips for Japanese Pitch Accent](https://gist.github.com/k3zi/3f38070efffa38db83cd5745d83b1235)
 * [Pitch Accent (Minimal Pairs)](https://kotu.io/tests/pitchAccent/minimalPairs)
 * [NHK Ojad Pitch Accent Deck](https://ankiweb.net/shared/info/1442436955)
@@ -100,6 +101,7 @@
 * [jidoujisho](https://github.com/lrorpilla/jidoujisho)
 * [Taiga](https://taiga.moe/)
   * [AJATT tip: Efficiently logging anime using Taiga](https://www.youtube.com/watch?v=KFC0JYwlVcs)
+* [youtube-dl](https://github.com/ytdl-org/youtube-dl/)
 
 ### Visual Novels
 
@@ -117,7 +119,7 @@
 
 ### Articles
 
-* [Strategis to avoid memory interference in flashcard collections](https://coffeejapanesestuff.neocities.org/interference.html)
+* [Strategies to avoid memory interference in flashcard collections](https://coffeejapanesestuff.neocities.org/interference.html)
 * [An easy way to learn hiragana](https://coffeejapanesestuff.neocities.org/hiragana.html)
 * [Writing Japanese](https://tatsumoto-ren.github.io/blog/writing-japanese.html)
 * [Scientific Studies About Language Learning](https://web.archive.org/web/20190207213227/http://rtkwiki.koohii.com/wiki/Scientific_Studies_about_Learning)
