@@ -90,12 +90,17 @@ Posts/Projects List
 }
 
 .postListTitle>a,
-.postListTitle>a:visited {
+.postListTitle>a:visited,
+.postListTitle>a:link {
     color: black;
 }
 
 .postListDescription {
     padding-left: 2ch;
+}
+
+.postListDate {
+    font-size: 0.75rem;
 }
 
 #posts>ul>li {
