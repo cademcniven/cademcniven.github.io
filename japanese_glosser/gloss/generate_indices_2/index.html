@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf8">
-	<title>Generate Indices Alt</title>
-	<script type="text/javascript" src="kuromoji/build/kuromoji.js"></script>
-	<script type="text/javascript" src="jmdict_dump.js"></script>
-	<script type="text/javascript" src="jp_corpus.js"></script>
-	<script type="text/javascript">
-		window.onload = function() {
+<!doctype html><html><head><meta charset="utf8"><title>Generate Indices Alt</title><script type="text/javascript" src="kuromoji/build/kuromoji.js"></script><script type="text/javascript" src="jmdict_dump.js"></script><script type="text/javascript" src="jp_corpus.js"></script><script type="text/javascript">window.onload = function() {
 			kuromoji.builder({dicPath: 'kuromoji/dict/'}).build(function(err, tokenizer) {
 				
 				console.log("=== BEGIN ===")
@@ -51,13 +42,4 @@
 				}
 				document.getElementById("output").innerHTML = mappingStr
 			})
-		}
-	</script>
-</head>
-<body>
-	<h1>Generate Kuromoji → JMdict Indices</h1>
-	<p>This page will generate indices from Kuromoji's word_id to JMdict's ent_seq.</p>
-	<p>Uses a different approach to generate_indices.html</p>
-	<pre id="output">Results will appear here shortly.</pre>
-</body>
-</html>
+		}</script></head><body><h1>Generate Kuromoji → JMdict Indices</h1><p>This page will generate indices from Kuromoji's word_id to JMdict's ent_seq.</p><p>Uses a different approach to generate_indices.html</p><pre id="output">Results will appear here shortly.</pre></body></html>
