@@ -1,0 +1,76 @@
+<!-- https://www.matuzo.at/blog/html-boilerplate/ -->
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A script for Anki that provides information about a kanji by hovering over it.">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:dnt" content="on">
+<meta property="og:title" content="Kanji Hover - Cade&#39;s Site &amp; Blog">
+<meta property="og:site_name" content="Cade&#39;s Site &amp; Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://cademcniven.com/projects/kanjihover/">
+<meta property="og:description" content="A script for Anki that provides information about a kanji by hovering over it.">
+<link rel="canonical" href="https://cademcniven.com/projects/kanjihover/">
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/site.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+<script src="/scripts/prism.js" defer></script>
+<link rel="stylesheet" href="/styles/prism.css">
+
+<title>Kanji Hover - Cade&#39;s Site &amp; Blog</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+    <a href="/">Posts</a>
+    <a href="/projects/">Projects</a>
+    <a href="/japaneseresources/">Japanese Resources</a>
+    <a href="/about/">About</a>
+</nav>
+        </header>
+        <main>
+            <div id="content">
+                <h1>Kanji Hover</h1>
+<p>A kanji script for Anki</p>
+<p><a href="https://github.com/cademcniven/Kanji-Hover/releases/tag/kanjiHoverV1">Download</a></p>
+<p><a href="https://github.com/cademcniven/Kanji-Hover/blob/main/Changelog.md">Changelog</a></p>
+<p><img src="/images/kanjihover/demo.gif" alt="demo"></p>
+<h2>Features</h2>
+<ul>
+<li>Hover any kanji for information about its grade level, meanings, and readings.</li>
+<li>Customize which portion of the card to apply the script to.</li>
+<li>Middle-mouse-click to open the Wikitionary page for that kanji.</li>
+</ul>
+<h2>How To Use</h2>
+<p><a href="https://github.com/cademcniven/Kanji-Hover/releases/">Download _kanjiHover.js</a> and add it to your collection.media folder.
+Add the following line to your note:</p>
+<pre><code class="language-html">&lt;script src=&quot;_kanjiHover.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong>Note:</strong> By default, Kanji Hover will not automatically scan your entire card. Instead, it is only active inside <code>&lt;div id=&quot;kanjiHover&quot;&gt;</code>. If you would like it to encompass the entire card, wrap the entire card in that div like so:</p>
+<p><img src="/images/kanjihover/template.png" alt="card template"></p>
+<h2>Changing The Appearance</h2>
+<p>The css for the popup can be changed in two ways:</p>
+<ol>
+<li>Edit the script itself, at the bottom there is a big block of css that you can edit.</li>
+<li>Using Anki's Styling area. The area you point at is <code>.kanjiTooltip</code>, the popup is <code>.kanjiTooltipText</code>, and the red text is <code>.hoverText</code>.</li>
+</ol>
+<h2>Compatibility &amp; Issues</h2>
+<p><strong>This script is not compatible with the &quot;kanjax with koohii&quot; script.</strong> If you try to use both, very bad things will happen. I'm still investigating the reason for the incompatibility, and I'll update the script if I figure it out.</p>
+<p><strong>This script is not compatible with the Migaku Japanese addon.</strong> Both this script and Migaku Japanese work by injecting html into the card, but they end up breaking each other in the process. I <em>might</em> try to fix this someday.</p>
+<p><strong>You may experience undesired appearance if your card css styles the &quot;a&quot; tag.</strong> Because this script wraps all kanji in links, any styling that you give to links in your card will be automatically applied to all kanji as well. If you <em>don't</em> have links styled, the kanji should, by default, look like the rest of your text.</p>
+<p><strong>This script can cause issues with ichi.moe, or other embedded sites.</strong> If you use an embed like that, make sure that it is not contained within <code>&lt;div id=&quot;kanjiHover&quot;&gt;</code>.</p>
+<p>Other than that, there very well may be more errors that come up. If you find anything, either make an issue or message me on Discord.</p>
+<h2>Sources</h2>
+<p>This project uses the API provided by <a href="https://kanjiapi.dev">https://kanjiapi.dev</a>.</p>
+
+            </div>
+        </main>
+    </body>
+</html>

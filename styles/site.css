@@ -1,0 +1,165 @@
+:root {
+    --main-font: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    --secondary-font: 'PT Sans', Helvetica, Arial, sans-serif;
+
+    font-size: min(max(1rem, 4vw), 19px);
+    font-family: var(--main-font);
+}
+
+/*************************
+Global Styling
+**************************/
+main {
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 0 3vw;
+}
+
+main #content {
+    max-width: 55ch;
+}
+
+header {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 1vh;
+    padding: 0 3vw;
+    text-align: left;
+    font-family: var(--secondary-font);
+}
+
+header>nav>a,
+header>nav>a:visited,
+header>nav>a:link {
+    width: fit-content;
+    margin-bottom: 1px;
+    padding: 0 1ch;
+    text-decoration: underline;
+    color: black;
+}
+
+header>nav>a:hover {
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        position: absolute;
+        margin-left: 300px;
+    }
+
+    header {
+        position: fixed;
+        margin-top: 15vh;
+        padding: 0;
+    }
+
+    header>nav {
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 3ch;
+    }
+
+    header>nav>a,
+    header>nav>a:visited,
+    header>nav>a:link {
+        font-size: 1.5em;
+        padding: 0;
+        text-decoration: none;
+    }
+}
+
+/*************************
+Posts/Projects List
+**************************/
+#posts>ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.postListTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.postListTitle>a,
+.postListTitle>a:visited {
+    color: black;
+}
+
+.postListDescription {
+    padding-left: 2ch;
+}
+
+#posts>ul>li {
+    margin-top: 3ch;
+}
+
+/*https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html*/
+#posts>li:before {
+    /* 1 */
+    content: "\200B";
+    /* 2 */
+    position: absolute;
+}
+
+.tag {
+    margin-right: 0.5ch;
+    text-decoration: underline;
+}
+
+/*************************
+Post styling
+**************************/
+a,
+a:visited,
+a:link {
+    color: #005ac0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: #003169;
+    background-color: #c7e1ff;
+}
+
+img {
+    max-width: 100%;
+}
+
+pre {
+    padding: 1rem;
+    max-height: 100ch;
+    overflow: auto;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    font-size: 0.5em;
+}
+
+blockquote {
+    margin: 0;
+    padding-left: 1.33em;
+
+    border-left: 3px solid #7a7a7a;
+
+    font-style: italic;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secondary-font);
+}

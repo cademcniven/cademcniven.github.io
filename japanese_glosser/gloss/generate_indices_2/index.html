@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Generate Indices Alt</title>
+	<script type="text/javascript" src="kuromoji/build/kuromoji.js"></script>
+	<script type="text/javascript" src="jmdict_dump.js"></script>
+	<script type="text/javascript" src="jp_corpus.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			kuromoji.builder({dicPath: 'kuromoji/dict/'}).build(function(err, tokenizer) {
+				
+				console.log("=== BEGIN ===")
+
+				const jmdict_inverted = {}
+
+				for (const index in jmdict_dump) {
+					const value = jmdict_dump[index]
+					if (jmdict_inverted[value[0]] == undefined) {
+						jmdict_inverted[value[0]] = index
+					}
+				}
+
+				console.log("=== INVERTED ===")
+
+				const mapping = []
+
+				for (const sentence_idx in jp_corpus) {
+					const words = tokenizer.tokenize(jp_corpus[sentence_idx])
+
+					if (words.length == 0) continue;
+
+					for (const word_idx in words) {
+						const word = words[word_idx]
+						if (word.word_type === "UNKNOWN") continue;
+						km_index = word.word_id
+
+						if (mapping[km_index] == undefined) {
+							const jm_index = jmdict_inverted[word.basic_form]
+							if (jm_index != undefined) {
+								mapping[km_index] = jm_index;
+							}
+						}
+					}
+				}
+				console.log("=== END ===")
+
+				var mappingStr = ""
+				for (const km_index in mapping) {
+					mappingStr += km_index + ": " + mapping[km_index] + ",\n"
+				}
+				document.getElementById("output").innerHTML = mappingStr
+			})
+		}
+	</script>
+</head>
+<body>
+	<h1>Generate Kuromoji → JMdict Indices</h1>
+	<p>This page will generate indices from Kuromoji's word_id to JMdict's ent_seq.</p>
+	<p>Uses a different approach to generate_indices.html</p>
+	<pre id="output">Results will appear here shortly.</pre>
+</body>
+</html>
