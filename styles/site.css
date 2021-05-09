@@ -36,7 +36,9 @@ header>nav>a:link {
     color: black;
 }
 
-header>nav>a:hover {
+header>nav>a:hover,
+header>nav>a:focus,
+header>nav>a:active {
     border-bottom: 1px solid black;
     margin-bottom: 0;
     background-color: white;
