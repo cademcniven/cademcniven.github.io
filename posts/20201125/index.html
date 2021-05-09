@@ -21,9 +21,6 @@
     href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
 
-<script src="/scripts/prism.js" defer></script>
-<link rel="stylesheet" href="/styles/prism.css">
-
 <title>How Far Should We Take i+1? - Cade&#39;s Site &amp; Blog</title>
     </head>
     <body>
@@ -89,14 +86,7 @@
 <p><img src="/images/20201125/back.png" alt="back"></p>
 <p>The back looks the same for both.</p>
 <p>If you're interested, the highlighting effect is achieved using the following bit of javascript:</p>
-<pre><code class="language-javascript">&lt;script&gt;
-var word = document.getElementById('word');
-var sentence = document.getElementById('sentence');
-
-var w = word.innerHTML;
-sentence.innerHTML = sentence.innerHTML.replace(w, '&lt;span class=&quot;highlightReading&quot;&gt;' + w + '&lt;/span&gt;');
-&lt;/script&gt;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span><br><span class="token keyword">var</span> word <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'word'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">var</span> sentence <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'sentence'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token keyword">var</span> w <span class="token operator">=</span> word<span class="token punctuation">.</span>innerHTML<span class="token punctuation">;</span><br>sentence<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> sentence<span class="token punctuation">.</span>innerHTML<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> <span class="token string">'&lt;span class="highlightReading">'</span> <span class="token operator">+</span> w <span class="token operator">+</span> <span class="token string">'&lt;/span>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
 <p>The sentence itself doesn't necessarily have to be i+1 since I'm not testing myself on the sentence (although I do listen to the full sentence audio on the back of every card). For a bit of justification of this kind of card (as opposed to a regular sentence card), see <a href="https://web.archive.org/web/20200523121931/https://www.animecards.site/">animecards.site</a></p>
 <p>Finally, I learn grammar points from the <a href="https://dojgdeck.neocities.org/">DoJG deck</a>.</p>
 <p><img src="/images/20201125/dojg.png" alt="dojg"></p>
