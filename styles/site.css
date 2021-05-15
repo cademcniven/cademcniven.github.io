@@ -1,15 +1,16 @@
 :root {
     /* https://css-tricks.com/snippets/css/system-font-stack/ */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: min(max(1rem, 4vw), 19px);
+    font-size: clamp(17px, 2.5vw, 20px);
 }
 
 /*************************
 Global Styling
 **************************/
 main {
-    flex-basis: 0;
-    flex-grow: 999;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
     padding: 0 3vw;
 }
 
@@ -18,12 +19,13 @@ main #content {
 }
 
 header {
-    display: flex;
-    flex-grow: 1;
     margin-top: 1vh;
     padding: 0 3vw;
-    text-align: left;
     font-weight: 700;
+}
+
+header>nav {
+    text-align: right;
 }
 
 header>nav>a,
@@ -32,47 +34,15 @@ header>nav>a:link {
     width: fit-content;
     margin-bottom: 1px;
     padding: 0 1ch;
-    text-decoration: underline;
     color: black;
 }
 
 header>nav>a:hover,
 header>nav>a:focus,
 header>nav>a:active {
-    border-bottom: 1px solid black;
     margin-bottom: 0;
-    background-color: white;
-}
-
-@media screen and (min-width: 768px) {
-    main {
-        position: absolute;
-        margin-left: 300px;
-    }
-
-    header {
-        position: fixed;
-        margin-top: 15vh;
-        padding: 0;
-    }
-
-    header>nav {
-        display: flex;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 3ch;
-    }
-
-    header>nav>a,
-    header>nav>a:visited,
-    header>nav>a:link {
-        font-size: 1.5em;
-        padding: 0;
-        text-decoration: none;
-    }
+    color: white;
+    background-color: black;
 }
 
 /*************************
@@ -93,6 +63,13 @@ Posts/Projects List
 .postListTitle>a:visited,
 .postListTitle>a:link {
     color: black;
+}
+
+.postListTitle>a:hover,
+.postListTitle>a:focus,
+.postListTitle>a:active {
+    color: white;
+    background-color: black;
 }
 
 .postListDescription {
