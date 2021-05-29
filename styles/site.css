@@ -1,21 +1,14 @@
 :root {
     /* https://css-tricks.com/snippets/css/system-font-stack/ */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
     font-size: clamp(17px, 2.5vw, 20px);
 }
 
 /*************************
 Global Styling
 **************************/
-main {
-    display: flex;
-    justify-content: center;
-    margin-top: 5vh;
-    padding: 0 3vw;
-}
-
-main #content {
-    max-width: 65ch;
+html {
+    overflow-x: hidden;
 }
 
 header {
@@ -24,25 +17,101 @@ header {
     font-weight: 700;
 }
 
-header>nav {
+nav {
     text-align: right;
 }
 
-header>nav>a,
-header>nav>a:visited,
-header>nav>a:link {
-    width: fit-content;
-    margin-bottom: 1px;
-    padding: 0 1ch;
-    color: black;
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-header>nav>a:hover,
-header>nav>a:focus,
-header>nav>a:active {
+nav li {
+    display: inline-block;
+}
+
+nav a,
+nav a:visited,
+nav a:link {
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 1px;
+    padding: 0.5rem;
+    color: #232028;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
     margin-bottom: 0;
     color: white;
     background-color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    padding: 0 3vw;
+}
+
+#content,
+#postHeaderContent {
+    max-width: 65ch;
+}
+
+#postHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 5ch;
+    background-color: #58d8a9;
+}
+
+/* 
+    Adds space on the top and bottom of a blog post header.
+    This doesn't work if the padding is on postHeader.
+    3vw padding is to make up for the padding we would have got
+    from being a child of main, had we not specified 100vw in 
+    postHeader
+*/
+#postHeaderContent {
+    padding: 10ch 3vw;
+}
+
+#postTitle {
+    font-size: 300%;
+}
+
+/* 
+    Because postTitle is so large, the line height ends up pushing
+    the date down more than I'd like. That's why line height gets
+    set to 0 here
+*/
+#postDate {
+    line-height: 0;
+    font-size: 90%;
+}
+
+/* 
+    margin-top accomodates for line-height 0 on postDate
+*/
+#postDescription {
+    margin-top: 3ch;
+}
+
+/* 
+    Change the color of highlighted text
+*/
+::selection {
+    background: #ffb7b7;
+}
+
+::-moz-selection {
+    background: #ffb7b7;
 }
 
 /*************************
@@ -126,7 +195,6 @@ pre {
     max-height: 100ch;
     overflow: auto;
     tab-size: 4;
-    -moz-tab-size: 4;
     font-size: 0.5em;
 }
 
