@@ -14,7 +14,6 @@ html {
 header {
     margin-top: 1vh;
     padding: 0 3vw;
-    font-weight: 700;
 }
 
 nav {
@@ -206,4 +205,30 @@ blockquote {
 
     font-style: italic;
     text-align: left;
+}
+
+/*************************
+Backlink styling
+**************************/
+.backlinks-title {
+    margin-bottom: 0;
+}
+
+.backlinks-container {
+    margin-top: 0;
+}
+
+.backlinks-default {
+    margin-top: 0;
+    margin-left: 16px;
+    color: var(--grey);
+}
+
+.backlink__preview {
+    display: none;
+}
+
+.backlink {
+    width: fit-content;
+    position: relative;
 }
