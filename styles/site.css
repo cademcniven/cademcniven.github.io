@@ -207,6 +207,22 @@ blockquote {
     text-align: left;
 }
 
+/* 
+    Styling for japanese text. font-style is a bit of a hack because of 
+    what I had to do to get markdown-it-attrs to apply to single words
+*/
+:lang(ja) {
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+rt {
+    font-size: 0.7em;
+}
+
 /*************************
 Backlink styling
 **************************/
