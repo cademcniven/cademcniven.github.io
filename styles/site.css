@@ -1,7 +1,8 @@
 :root {
     /* https://css-tricks.com/snippets/css/system-font-stack/ */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
-    font-size: clamp(17px, 2.5vw, 20px);
+    font-size: 140%;
+    line-height: 1.6;
 }
 
 /*************************
@@ -70,6 +71,10 @@ main {
     background-color: #58d8a9;
 }
 
+#postHeader h1 {
+    line-height: 1;
+}
+
 /* 
     Adds space on the top and bottom of a blog post header.
     This doesn't work if the padding is on postHeader.
@@ -107,10 +112,12 @@ main {
 */
 ::selection {
     background: #ffb7b7;
+    color: black;
 }
 
 ::-moz-selection {
     background: #ffb7b7;
+    color: black;
 }
 
 /*************************
@@ -130,14 +137,13 @@ Posts/Projects List
 .postListTitle>a,
 .postListTitle>a:visited,
 .postListTitle>a:link {
-    color: black;
+    color: #232028;
 }
 
 .postListTitle>a:hover,
 .postListTitle>a:focus,
 .postListTitle>a:active {
-    color: white;
-    background-color: black;
+    color: black;
 }
 
 .postListDescription {
@@ -178,8 +184,7 @@ a:link {
 a:focus,
 a:hover,
 a:active {
-    color: #003169;
-    background-color: #c7e1ff;
+    color: #002249;
 }
 
 img {
