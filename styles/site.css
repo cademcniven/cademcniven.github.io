@@ -1,0 +1,259 @@
+:root {
+    /* https://css-tricks.com/snippets/css/system-font-stack/ */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+    font-size: 140%;
+    line-height: 1.6;
+}
+
+/*************************
+Global Styling
+**************************/
+html {
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 1vh;
+    padding: 0 3vw;
+}
+
+nav {
+    text-align: right;
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a,
+nav a:visited,
+nav a:link {
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 1px;
+    padding: 0.5rem;
+    color: #232028;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    margin-bottom: 0;
+    color: white;
+    background-color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    padding: 0 3vw;
+}
+
+#content,
+#postHeaderContent {
+    max-width: 65ch;
+}
+
+#content {
+    width: 100%;
+}
+
+#postHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 5ch;
+    background-color: #58d8a9;
+}
+
+#postHeader h1 {
+    line-height: 1;
+}
+
+/* 
+    Adds space on the top and bottom of a blog post header.
+    This doesn't work if the padding is on postHeader.
+    3vw padding is to make up for the padding we would have got
+    from being a child of main, had we not specified 100vw in 
+    postHeader
+*/
+#postHeaderContent {
+    padding: 10ch 3vw;
+}
+
+#postTitle {
+    font-size: 300%;
+}
+
+/* 
+    Because postTitle is so large, the line height ends up pushing
+    the date down more than I'd like. That's why line height gets
+    set to 0 here
+*/
+#postDate {
+    line-height: 0;
+    font-size: 90%;
+}
+
+/* 
+    margin-top accomodates for line-height 0 on postDate
+*/
+#postDescription {
+    margin-top: 3ch;
+}
+
+/* 
+    Change the color of highlighted text
+*/
+::selection {
+    background: #ffb7b7;
+    color: black;
+}
+
+::-moz-selection {
+    background: #ffb7b7;
+    color: black;
+}
+
+/*************************
+Posts/Projects List
+**************************/
+#posts>ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.postListTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.postListTitle>a,
+.postListTitle>a:visited,
+.postListTitle>a:link {
+    color: #232028;
+}
+
+.postListTitle>a:hover,
+.postListTitle>a:focus,
+.postListTitle>a:active {
+    color: black;
+}
+
+.postListDescription {
+    padding-left: 2ch;
+}
+
+.postListDateAndTags {
+    font-size: 0.75rem;
+}
+
+#posts>ul>li {
+    margin-top: 3ch;
+}
+
+/*https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html*/
+#posts>li:before {
+    /* 1 */
+    content: "\200B";
+    /* 2 */
+    position: absolute;
+}
+
+.tag {
+    margin-right: 0.5ch;
+    text-decoration: underline;
+}
+
+/*************************
+Post styling
+**************************/
+a,
+a:visited,
+a:link {
+    color: #005ac0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: #002249;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+pre {
+    padding: 1rem;
+    max-height: 100ch;
+    overflow: auto;
+    tab-size: 4;
+    font-size: 0.5em;
+}
+
+blockquote {
+    margin: 0;
+    padding-left: 1.33em;
+
+    border-left: 3px solid #7a7a7a;
+
+    font-style: italic;
+    text-align: left;
+}
+
+/* 
+    Styling for japanese text. font-style is a bit of a hack because of 
+    what I had to do to get markdown-it-attrs to apply to single words
+*/
+:lang(ja) {
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+rt {
+    font-size: 0.7em;
+}
+
+/*************************
+Backlink styling
+**************************/
+.backlinks-title {
+    margin-bottom: 0;
+}
+
+.backlinks-container {
+    margin-top: 0;
+}
+
+.backlinks-default {
+    margin-top: 0;
+    margin-left: 16px;
+    color: var(--grey);
+}
+
+.backlink__preview {
+    display: none;
+}
+
+.backlink {
+    width: fit-content;
+    position: relative;
+}
