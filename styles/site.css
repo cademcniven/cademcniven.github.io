@@ -4,9 +4,11 @@
     font-size: 23px;
     line-height: 1.6;
 
-    --dark-green: #436436;
-    --dark-purple: rebeccapurple;
+    --dark-green: #004F2D;
+    --dark-purple: #2F195F;
     --dark-brown: #251101;
+    --dark-orange: #D65108;
+    --red: #C3423F;
     --light-brown: #a57548;
     --light-red: #ff6978;
 }
@@ -25,7 +27,7 @@ header {
 nav {
     text-align: right;
     padding-right: 3vw;
-    background-color: var(--dark-green);
+    background-color: var(--dark-purple);
 }
 
 nav>ul {
@@ -76,9 +78,9 @@ main {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 170vw;
     padding-bottom: 5ch;
-    background-color: var(--dark-green);
+    background-color: var(--dark-purple);
     color: white;
 }
 
@@ -90,11 +92,11 @@ main {
     right: 0;
     z-index: 1;
     overflow: hidden;
-    font-size: 1500%;
+    font-size: 2500%;
     font-weight: bold;
     line-height: 0.5;
-    color: var(--dark-green);
-    filter: brightness(120%);
+    color: var(--dark-purple);
+    filter: brightness(140%);
     user-select: none;
 }
 
