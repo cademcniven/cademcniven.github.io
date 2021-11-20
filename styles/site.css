@@ -1,8 +1,14 @@
 :root {
     /* https://css-tricks.com/snippets/css/system-font-stack/ */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
-    font-size: 140%;
+    font-size: 23px;
     line-height: 1.6;
+
+    --dark-green: #436436;
+    --dark-purple: rebeccapurple;
+    --dark-brown: #251101;
+    --light-brown: #a57548;
+    --light-red: #ff6978;
 }
 
 /*************************
@@ -13,12 +19,13 @@ html {
 }
 
 header {
-    margin-top: 1vh;
-    padding: 0 3vw;
+    width: 100vw;
 }
 
 nav {
     text-align: right;
+    padding-right: 3vw;
+    background-color: var(--dark-green);
 }
 
 nav>ul {
@@ -38,7 +45,7 @@ nav a:link {
     width: fit-content;
     margin-bottom: 1px;
     padding: 0.5rem;
-    color: #232028;
+    color: white;
 }
 
 nav a:hover,
@@ -53,7 +60,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
     padding: 0 3vw;
 }
 
@@ -72,7 +78,24 @@ main {
     justify-content: center;
     width: 100vw;
     padding-bottom: 5ch;
-    background-color: #58d8a9;
+    background-color: var(--dark-green);
+    color: white;
+}
+
+#postHeaderBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    font-size: 1500%;
+    font-weight: bold;
+    line-height: 0.5;
+    color: var(--dark-green);
+    filter: brightness(120%);
+    user-select: none;
 }
 
 #postHeader h1 {
@@ -88,6 +111,7 @@ main {
 */
 #postHeaderContent {
     padding: 10ch 3vw;
+    z-index: 2;
 }
 
 #postTitle {
