@@ -66,7 +66,7 @@ main {
 }
 
 #content,
-#postHeaderContent {
+.postHeaderContent {
     max-width: 65ch;
 }
 
@@ -74,17 +74,18 @@ main {
     width: 100%;
 }
 
-#postHeader {
-    position: relative;
+.postHeader {
     display: flex;
-    justify-content: center;
-    width: 170vw;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
     padding-bottom: 5ch;
     background-color: var(--dark-purple);
     color: white;
 }
 
-#postHeaderBackground {
+.postHeaderBackground {
+    width: 170vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -100,8 +101,15 @@ main {
     user-select: none;
 }
 
-#postHeader h1 {
+.postHeader h1 {
     line-height: 1;
+}
+
+.postHeaderContentWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 2;
 }
 
 /* 
@@ -111,12 +119,11 @@ main {
     from being a child of main, had we not specified 100vw in 
     postHeader
 */
-#postHeaderContent {
+.postHeaderContent {
     padding: 10ch 3vw;
-    z-index: 2;
 }
 
-#postTitle {
+.postTitle {
     font-size: 300%;
 }
 
@@ -125,7 +132,7 @@ main {
     the date down more than I'd like. That's why line height gets
     set to 0 here
 */
-#postDate {
+.postDate {
     line-height: 0;
     font-size: 90%;
 }
@@ -133,7 +140,7 @@ main {
 /* 
     margin-top accomodates for line-height 0 on postDate
 */
-#postDescription {
+.postDescription {
     margin-top: 3ch;
 }
 
