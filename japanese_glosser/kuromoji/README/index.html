@@ -6,17 +6,17 @@ example/      -- Examples to use in Node.js
 src/          -- JavaScript source
 test/         -- Unit test
 </code></pre><h2>Usage</h2><p>You can tokenize sentences with only 5 lines of code. If you need working examples, you can see the files under the demo or example directory.</p><h3>Node.js</h3><p>Install with npm package manager:</p><pre><code>npm install kuromoji
-</code></pre><p>Load this library as follows:</p><pre><code>var kuromoji = require(&quot;kuromoji&quot;);
-</code></pre><p>You can prepare tokenizer like this:</p><pre><code>kuromoji.builder({ dicPath: &quot;path/to/dictionary/dir/&quot; }).build(function (err, tokenizer) {
+</code></pre><p>Load this library as follows:</p><pre><code>var kuromoji = require("kuromoji");
+</code></pre><p>You can prepare tokenizer like this:</p><pre><code>kuromoji.builder({ dicPath: "path/to/dictionary/dir/" }).build(function (err, tokenizer) {
     // tokenizer is ready
-    var path = tokenizer.tokenize(&quot;すもももももももものうち&quot;);
+    var path = tokenizer.tokenize("すもももももももものうち");
     console.log(path);
 });
 </code></pre><h3>Browser</h3><p>You only need the build/kuromoji.js and dict/*.dat.gz files</p><p>Install with Bower package manager:</p><pre><code>bower install kuromoji
-</code></pre><p>Or you can use the kuromoji.js file and dictionary files from the GitHub repository.</p><p>In your HTML:</p><pre><code>&lt;script src=&quot;url/to/kuromoji.js&quot;&gt;&lt;/script&gt;
-</code></pre><p>In your JavaScript:</p><pre><code>kuromoji.builder({ dicPath: &quot;/url/to/dictionary/dir/&quot; }).build(function (err, tokenizer) {
+</code></pre><p>Or you can use the kuromoji.js file and dictionary files from the GitHub repository.</p><p>In your HTML:</p><pre><code>&lt;script src="url/to/kuromoji.js"&gt;&lt;/script&gt;
+</code></pre><p>In your JavaScript:</p><pre><code>kuromoji.builder({ dicPath: "/url/to/dictionary/dir/" }).build(function (err, tokenizer) {
     // tokenizer is ready
-    var path = tokenizer.tokenize(&quot;すもももももももものうち&quot;);
+    var path = tokenizer.tokenize("すもももももももものうち");
     console.log(path);
 });
 </code></pre><h2>API</h2><p>The function tokenize() returns an JSON array like this:</p><pre><code>[ {
