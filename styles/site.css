@@ -1,8 +1,14 @@
+/* 
+    The css reset code scattered throughout this file was inspired by https://nicolasgallagher.com/about-normalize-css/ 
+    and https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
 :root {
     /* https://css-tricks.com/snippets/css/system-font-stack/ */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "ヒラギノ角ゴ Pro W3", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
     font-size: 23px;
     line-height: 1.6;
+    box-sizing: border-box;
 
     --dark-green: #004F2D;
     --dark-purple: #2F195F;
@@ -18,6 +24,47 @@ Global Styling
 **************************/
 html {
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+/* 
+    Avoid Text Overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    1. Remove the bottom border in Chrome 57-
+    2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    /* 1 */
+    border-bottom: none;
+    /* 2 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+}
+
+/*
+    Add the correct font weight in Chrome, Edge, and Safari.
+*/
+b,
+strong {
+    font-weight: bolder;
 }
 
 header {
@@ -45,17 +92,15 @@ nav a:visited,
 nav a:link {
     display: inline-block;
     width: fit-content;
-    margin-bottom: 1px;
     padding: 0.5rem;
     color: white;
+    border-bottom: 3px solid var(--dark-purple);
 }
 
 nav a:hover,
 nav a:focus,
 nav a:active {
-    margin-bottom: 0;
-    color: white;
-    background-color: black;
+    border-bottom: 3px solid var(--light-red);
 }
 
 main {
