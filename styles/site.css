@@ -74,6 +74,13 @@ main {
     width: 100%;
 }
 
+aside {
+    float: inline-end;
+    width: 40%;
+    padding: 1em;
+    border: 2px solid var(--dark-orange);
+}
+
 .postHeader {
     display: flex;
     position: relative;
@@ -148,12 +155,12 @@ main {
     Change the color of highlighted text
 */
 ::selection {
-    background: #ffb7b7;
+    background: var(--light-red);
     color: black;
 }
 
 ::-moz-selection {
-    background: #ffb7b7;
+    background: var(--light-red);
     color: black;
 }
 
