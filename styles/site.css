@@ -278,9 +278,7 @@ a:active {
 
 img {
     display: block;
-    width: auto;
     max-width: 100%;
-    height: auto;
 }
 
 pre {
@@ -341,4 +339,11 @@ Backlink styling
 .backlink {
     width: fit-content;
     position: relative;
+}
+
+/*************************
+About Page
+**************************/
+.myFace img {
+    margin-top: 3em;
 }
