@@ -175,8 +175,12 @@ aside {
     padding: 10ch 3vw;
 }
 
+/* 
+    We generally want 300%, but long words can overflow on small screens,
+    so we need to scale appropriately
+*/
 .postTitle {
-    font-size: 300%;
+    font-size: clamp(2rem, 5vw, 300%);
 }
 
 /* 
