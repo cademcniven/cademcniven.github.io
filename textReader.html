@@ -106,6 +106,15 @@
                 margin-bottom: 3rem;
                 border-bottom: 2px solid var(--primary);
             }
+
+            input[type="file"] {
+                display: none;
+            }
+
+            .fileUpload {
+                color: #005ac0;
+                cursor: pointer;
+            }
         </style>
         <script>
             const punctuation = /[「」『』（）〔〕［］｛｝｟｠〈〉《》【】〖〗〘〙〚〛。、・゠＝〜…‥•◦﹅﹆※＊〽〓♪♫♬♩]/g
@@ -136,6 +145,27 @@
                 let root = document.querySelector(":root")
                 localStorage.setItem('primaryColor', getComputedStyle(root).getPropertyValue("--primary"))
                 localStorage.setItem('secondaryColor', getComputedStyle(root).getPropertyValue("--secondary"))
+            }
+
+            function handleFileUpload(event) {
+                document.getElementById("readerText").innerHTML = ""
+                document.getElementById("textLength").innerText = "0"
+
+                let files = event.target.files
+                files = [...files]
+                files.sort((a, b) => a.name > b.name)
+
+                for (const file of files){
+                    const reader = new FileReader();
+
+                    reader.onload = function(event) {            
+                        document.getElementById('readerText').innerHTML += `<div class="textFile"><div class="fileName">${file.name}</div>${event.target.result}</div>`
+                        UpdateTotalCharacters(event.target.result)
+                        UpdateCache()
+                    }
+
+                    languageEncoding(file).then(f => reader.readAsText(file, f.encoding))
+                }
             }
 
             function dropHandler(ev) {
@@ -196,11 +226,16 @@
     <body ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
         <main id="readerText" lang="ja">
             <div id="dragAndDropInstructions">
-                Drag and drop 1 or more .txt files onto the page
+                <p>Drag and drop 1 or more .txt files onto the page, or click
+                    <label class="fileUpload"><input type="file"
+                            onchange="handleFileUpload(event)" multiple>here</label></p>
             </div>
         </main>
         <footer>
             <span>
+                <label class="fileUpload"><input type="file"
+                        onchange="handleFileUpload(event)" multiple>Upload</label>
+                ・
                 <button id="themeToggle" class="button-unstyled"
                     onclick="ToggleTheme()">Toggle Theme</button>
                 ・
