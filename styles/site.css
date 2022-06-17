@@ -67,6 +67,10 @@ strong {
     font-weight: bolder;
 }
 
+code {
+    color: var(--red);
+}
+
 header {
     width: 100vw;
 }
