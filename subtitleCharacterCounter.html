@@ -72,6 +72,18 @@
 
                     reader.onload = function(event) {      
                         subtitleText += event.target.result
+
+                        console.log(subtitleText)
+                        //remove text within parenthesis,
+                        //but only if there's an even number of parenthesis
+                        if (subtitleText.match(/\(/g).length == subtitleText.match(/\)/g).length)
+                            subtitleText = subtitleText.replace(/\(.*\)/g, "")
+
+                        if (subtitleText.match(/（/g).length == subtitleText.match(/）/g).length)
+                            subtitleText = subtitleText.replace(/（.*）/g, "")
+
+                        console.log(subtitleText)
+
                         characterCount.innerText = [...subtitleText.matchAll(regex)].join('').length + ' characters'
                     }
 
