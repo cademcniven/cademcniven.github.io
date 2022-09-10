@@ -74,12 +74,18 @@
                         subtitleText += event.target.result
 
                         console.log(subtitleText)
+
+                        let lp = subtitleText.match(/\(/g)
+                        let rp = subtitleText.match(/\)/g)
+
                         //remove text within parenthesis,
                         //but only if there's an even number of parenthesis
-                        if (subtitleText.match(/\(/g).length == subtitleText.match(/\)/g).length)
+                        if (lp && rp && lp.length == rp.length)
                             subtitleText = subtitleText.replace(/\(.*\)/g, "")
 
-                        if (subtitleText.match(/（/g).length == subtitleText.match(/）/g).length)
+                        let lp2 = subtitleText.match(/（/g)
+                        let rp2 = subtitleText.match(/）/g)
+                        if (lp2 && rp2 && lp2.length == rp2.length)
                             subtitleText = subtitleText.replace(/（.*）/g, "")
 
                         console.log(subtitleText)
