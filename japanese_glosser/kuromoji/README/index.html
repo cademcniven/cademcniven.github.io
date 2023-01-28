@@ -1,25 +1,25 @@
-<h1>kuromoji.js</h1><p><a href="https://travis-ci.org/takuyaa/kuromoji.js"><img src="https://travis-ci.org/takuyaa/kuromoji.js.svg?branch=master" alt="Build Status" loading="lazy"></a><a href="https://coveralls.io/github/takuyaa/kuromoji.js?branch=master"><img src="https://coveralls.io/repos/github/takuyaa/kuromoji.js/badge.svg?branch=master" alt="Coverage Status" loading="lazy"></a><a href="http://badge.fury.io/js/kuromoji"><img src="https://badge.fury.io/js/kuromoji.svg" alt="npm version" loading="lazy"></a><a href="http://badge.fury.io/bo/kuromoji"><img src="https://badge.fury.io/bo/kuromoji.svg" alt="Bower version" loading="lazy"></a><a href="https://david-dm.org/takuyaa/kuromoji.js"><img src="https://david-dm.org/takuyaa/kuromoji.js.svg" alt="dependencies" loading="lazy"></a><a href="https://codeclimate.com/github/takuyaa/kuromoji.js"><img src="https://codeclimate.com/github/takuyaa/kuromoji.js/badges/gpa.svg" alt="Code Climate" loading="lazy"></a><a href="https://www.npmjs.com/package/kuromoji"><img src="https://img.shields.io/npm/dm/kuromoji.svg" alt="Downloads" loading="lazy"></a></p><p>JavaScript implementation of Japanese morphological analyzer. This is a pure JavaScript porting of <a href="http://www.atilika.com/ja/products/kuromoji.html">Kuromoji</a>.</p><p>You can see how kuromoji.js works in <a href="http://takuyaa.github.io/kuromoji.js/demo/tokenize.html">demo site</a>.</p><h2>Directory</h2><p>Directory tree is as follows:</p><pre><code>build/
+<h1>kuromoji.js</h1><p><a href="https://travis-ci.org/takuyaa/kuromoji.js"><img src="https://travis-ci.org/takuyaa/kuromoji.js.svg?branch=master" alt="Build Status" loading="lazy"></a><a href="https://coveralls.io/github/takuyaa/kuromoji.js?branch=master"><img src="https://coveralls.io/repos/github/takuyaa/kuromoji.js/badge.svg?branch=master" alt="Coverage Status" loading="lazy"></a><a href="http://badge.fury.io/js/kuromoji"><img src="https://badge.fury.io/js/kuromoji.svg" alt="npm version" loading="lazy"></a><a href="http://badge.fury.io/bo/kuromoji"><img src="https://badge.fury.io/bo/kuromoji.svg" alt="Bower version" loading="lazy"></a><a href="https://david-dm.org/takuyaa/kuromoji.js"><img src="https://david-dm.org/takuyaa/kuromoji.js.svg" alt="dependencies" loading="lazy"></a><a href="https://codeclimate.com/github/takuyaa/kuromoji.js"><img src="https://codeclimate.com/github/takuyaa/kuromoji.js/badges/gpa.svg" alt="Code Climate" loading="lazy"></a><a href="https://www.npmjs.com/package/kuromoji"><img src="https://img.shields.io/npm/dm/kuromoji.svg" alt="Downloads" loading="lazy"></a></p><p>JavaScript implementation of Japanese morphological analyzer. This is a pure JavaScript porting of <a href="http://www.atilika.com/ja/products/kuromoji.html">Kuromoji</a>.</p><p>You can see how kuromoji.js works in <a href="http://takuyaa.github.io/kuromoji.js/demo/tokenize.html">demo site</a>.</p><div class="heading-wrapper h2"><h2 id="directory">Directory</h2><a class="anchor" href="#directory" aria-labelledby="directory"><span hidden="">#</span></a></div><p>Directory tree is as follows:</p><pre><code>build/
   kuromoji.js -- JavaScript file for browser (Browserified)
 demo/         -- Demo
 dict/         -- Dictionaries for tokenizer (gzipped)
 example/      -- Examples to use in Node.js
 src/          -- JavaScript source
 test/         -- Unit test
-</code></pre><h2>Usage</h2><p>You can tokenize sentences with only 5 lines of code. If you need working examples, you can see the files under the demo or example directory.</p><h3>Node.js</h3><p>Install with npm package manager:</p><pre><code>npm install kuromoji
+</code></pre><div class="heading-wrapper h2"><h2 id="usage">Usage</h2><a class="anchor" href="#usage" aria-labelledby="usage"><span hidden="">#</span></a></div><p>You can tokenize sentences with only 5 lines of code. If you need working examples, you can see the files under the demo or example directory.</p><div class="heading-wrapper h3"><h3 id="nodejs">Node.js</h3><a class="anchor" href="#nodejs" aria-labelledby="nodejs"><span hidden="">#</span></a></div><p>Install with npm package manager:</p><pre><code>npm install kuromoji
 </code></pre><p>Load this library as follows:</p><pre><code>var kuromoji = require("kuromoji");
 </code></pre><p>You can prepare tokenizer like this:</p><pre><code>kuromoji.builder({ dicPath: "path/to/dictionary/dir/" }).build(function (err, tokenizer) {
     // tokenizer is ready
     var path = tokenizer.tokenize("すもももももももものうち");
     console.log(path);
 });
-</code></pre><h3>Browser</h3><p>You only need the build/kuromoji.js and dict/*.dat.gz files</p><p>Install with Bower package manager:</p><pre><code>bower install kuromoji
+</code></pre><div class="heading-wrapper h3"><h3 id="browser">Browser</h3><a class="anchor" href="#browser" aria-labelledby="browser"><span hidden="">#</span></a></div><p>You only need the build/kuromoji.js and dict/*.dat.gz files</p><p>Install with Bower package manager:</p><pre><code>bower install kuromoji
 </code></pre><p>Or you can use the kuromoji.js file and dictionary files from the GitHub repository.</p><p>In your HTML:</p><pre><code>&lt;script src="url/to/kuromoji.js"&gt;&lt;/script&gt;
 </code></pre><p>In your JavaScript:</p><pre><code>kuromoji.builder({ dicPath: "/url/to/dictionary/dir/" }).build(function (err, tokenizer) {
     // tokenizer is ready
     var path = tokenizer.tokenize("すもももももももものうち");
     console.log(path);
 });
-</code></pre><h2>API</h2><p>The function tokenize() returns an JSON array like this:</p><pre><code>[ {
+</code></pre><div class="heading-wrapper h2"><h2 id="api">API</h2><a class="anchor" href="#api" aria-labelledby="api"><span hidden="">#</span></a></div><p>The function tokenize() returns an JSON array like this:</p><pre><code>[ {
     word_id: 509800,          // 辞書内での単語ID
     word_type: 'KNOWN',       // 単語タイプ(辞書に登録されている単語ならKNOWN, 未知語ならUNKNOWN)
     word_position: 1,         // 単語の開始位置

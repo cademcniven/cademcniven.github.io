@@ -17,6 +17,8 @@
     --red: #C3423F;
     --light-brown: #a57548;
     --light-red: #ff6978;
+
+    --serif: playfair;
 }
 
 /*************************
@@ -33,6 +35,23 @@ body {
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 /* 
     Avoid Text Overflows
 */
@@ -44,6 +63,7 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 /*
@@ -72,13 +92,23 @@ code {
 }
 
 header {
-    width: 100vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    margin-left: 5%;
+    font-family: var(--serif);
+    width: 20%;
 }
 
 nav {
+    display: flex;
     text-align: right;
-    padding-right: 3vw;
-    background-color: var(--dark-purple);
+    align-items: center;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 nav>ul {
@@ -87,31 +117,29 @@ nav>ul {
     padding: 0;
 }
 
-nav li {
-    display: inline-block;
-}
-
 nav a,
 nav a:visited,
 nav a:link {
+    color: black;
     display: inline-block;
     width: fit-content;
     padding: 0.5rem;
-    color: white;
-    border-bottom: 3px solid var(--dark-purple);
 }
 
 nav a:hover,
 nav a:focus,
 nav a:active {
-    border-bottom: 3px solid var(--light-red);
+    text-decoration: underline;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 3vw;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 80%;
 }
 
 #content,
@@ -121,6 +149,8 @@ main {
 
 #content {
     width: 100%;
+    margin: auto;
+    margin-left: 15%;
 }
 
 aside {
@@ -133,11 +163,8 @@ aside {
 .postHeader {
     display: flex;
     position: relative;
-    width: 100vw;
     overflow: hidden;
     padding-bottom: 5ch;
-    background-color: var(--dark-purple);
-    color: white;
 }
 
 .postHeaderBackground {
@@ -148,17 +175,10 @@ aside {
     bottom: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
-    font-size: 2500%;
-    font-weight: bold;
-    line-height: 0.5;
-    color: var(--dark-purple);
-    filter: brightness(140%);
-    user-select: none;
 }
 
 .postHeader h1 {
-    line-height: 1;
+    line-height: 1.4;
 }
 
 .postHeaderContentWrapper {
@@ -184,7 +204,12 @@ aside {
     so we need to scale appropriately
 */
 .postTitle {
+    font-family: var(--serif);
     font-size: clamp(2rem, 5vw, 300%);
+}
+
+.postTitle span {
+    background-color: white;
 }
 
 /* 
@@ -193,8 +218,13 @@ aside {
     set to 0 here
 */
 .postDate {
+    font-family: var(--serif);
     line-height: 0;
-    font-size: 90%;
+    font-weight: bold;
+}
+
+.postDate span {
+    background-color: white;
 }
 
 /* 
@@ -217,6 +247,68 @@ aside {
     color: black;
 }
 
+.tableOfContents {
+    margin-top: 3em;
+    font-size: 70%;
+    line-height: normal;
+}
+
+.toc {
+    display: block;
+    text-align: left;
+    height: auto;
+    position: inherit;
+}
+
+.toc ol a {
+    padding: 0;
+}
+
+.toc a,
+.toc a:link,
+.toc a:visited {
+    color: #005ac0;
+}
+
+.toc a:focus,
+.toc a:hover {
+    color: #005ac0;
+}
+
+.anchor [hidden] {
+    display: block;
+    text-decoration: underline;
+}
+
+.heading-wrapper .anchor {
+    margin-right: .75rem;
+    opacity: 60%;
+    order: -1;
+}
+
+.heading-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+h2+.anchor {
+    font-size: 1.5em;
+}
+
+h3+.anchor {
+    font-size: 1.17em;
+}
+
+h4+.anchor {
+    font-size: 1em;
+}
+
+h5+.anchor {
+    font-size: 0.83em;
+}
+
 /*************************
 Posts/Projects List
 **************************/
@@ -229,6 +321,7 @@ Posts/Projects List
 .postListTitle {
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: var(--serif);
 }
 
 .postListTitle>a,
@@ -288,6 +381,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    margin: auto;
 }
 
 pre {
@@ -355,4 +449,39 @@ About Page
 **************************/
 .myFace img {
     margin-top: 3em;
+}
+
+/*************************
+Media Queries
+**************************/
+
+@media (max-width: 1300px) {
+    #content {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    nav {
+        height: initial;
+        justify-content: center;
+    }
+
+    nav>ul {
+        display: inline-flex;
+    }
+
+    main {
+        width: 98%;
+        margin: auto;
+    }
 }
