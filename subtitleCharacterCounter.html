@@ -66,35 +66,64 @@
             function countCharacters(files){
                 const characterCount = document.getElementById('characterCount')
                 let subtitleText = ""
-
+                let i = 0
                 for (const file of files){
                     const reader = new FileReader();
-
+                    i+=1
                     reader.onload = function(event) {      
-                        subtitleText += event.target.result
 
-                        console.log(subtitleText)
-
-                        let lp = subtitleText.match(/\(/g)
-                        let rp = subtitleText.match(/\)/g)
-
-                        //remove text within parenthesis,
-                        //but only if there's an even number of parenthesis
-                        if (lp && rp && lp.length == rp.length)
-                            subtitleText = subtitleText.replace(/\(.*\)/g, "")
-
-                        let lp2 = subtitleText.match(/（/g)
-                        let rp2 = subtitleText.match(/）/g)
-                        if (lp2 && rp2 && lp2.length == rp2.length)
-                            subtitleText = subtitleText.replace(/（.*）/g, "")
-
-                        console.log(subtitleText)
+                        subtitleText += removeParentheticals(event.target.result, file);
 
                         characterCount.innerText = [...subtitleText.matchAll(regex)].join('').length + ' characters'
                     }
 
                     reader.readAsText(file)
                 }
+            }
+
+            function removeParentheticals(file_contents, file_metadata) {
+                /**
+                 * Removes parentheses and the stuff inside of them line-by-line.
+                 * Do this line by line because sometimes there are typos were parentheses do not terminate,
+                 * or a small parenthesis is closed with a big parenthesis (or vice-versa).
+                 * If there is a mismatch on a line, we just don't delete that parenthetical.
+                 * 
+                 * Note: .* pattern matches one or more character except for line-break characters (like \n).
+                 * Since this is line-by-line it doesn't matter, but worth mentioning in case a different method
+                 * is used in the future.
+                 */
+
+                // https://stackoverflow.com/questions/21895233/how-to-split-string-with-newline-n-in-node
+                // Windows + Unix newline
+                split = file_contents.split(/\r?\n/);
+
+                for (let i = 0; i < split.length; i++){
+
+                    let line = split[i]
+
+                    let lp_big = line.match(/（/g)
+                    let rp_big = line.match(/）/g)
+                    
+                    //remove text within parenthesis,
+                    //but only if there's an even number of parenthesis
+                    if (lp_big && rp_big && lp_big.length == rp_big.length)
+                        line = line.replace(/（.*）/g, "")
+
+                    let lp_standard = line.match(/\(/g)
+                    let rp_standard = line.match(/\)/g)
+
+                    if (lp_standard && rp_standard && lp_standard.length == rp_standard.length)
+                        line = line.replace(/\(.*\)/g, "")
+
+                    if ((!lp_big != !rp_big) || (!lp_standard != !rp_standard)) {
+                        console.log(file_metadata);
+                        console.log(`Mismatched parentheses found on line: ${i}`);
+                    }
+
+                    split[i] = line;
+                }
+                
+                return split.join('\n');
             }
 
             function handleFileUpload(event) {
